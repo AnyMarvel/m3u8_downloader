@@ -166,7 +166,7 @@ public class M3U8Downloader {
         @Override
         public void onStartDownload(int totalTs, int curTs) {
             M3U8Log.d("onStartDownload: "+totalTs+"|"+curTs);
-
+            curLength = 0;
             currentM3U8Task.setState(M3U8TaskState.DOWNLOADING);
             if (totalTs > 0) {
                 downloadProgress = 1.0f * curTs / totalTs;

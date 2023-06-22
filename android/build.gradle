@@ -3,8 +3,9 @@ version '1.0'
 
 buildscript {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
-        jcenter()
     }
 
     dependencies {
@@ -14,8 +15,9 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         google()
-        jcenter()
     }
 }
 
@@ -27,5 +29,10 @@ android {
     defaultConfig {
         minSdkVersion 16
     }
+}
+dependencies {
+    // for other module visit
+    compileOnly files("/Users/lijuntao/mycode/flutter/bin/cache/artifacts/engine/android-arm/flutter.jar")
+
 }
 

@@ -30,9 +30,12 @@ android {
         minSdkVersion 16
     }
 }
+
+def FLUTTER_HOME = System.getenv('FLUTTER_HOME');
+
 dependencies {
     // for other module visit
-    compileOnly files("/Users/lijuntao/mycode/flutter/bin/cache/artifacts/engine/android-arm/flutter.jar")
+    compileOnly files("$FLUTTER_HOME/bin/cache/artifacts/engine/android-arm/flutter.jar")
 
 }
 
